@@ -1,5 +1,5 @@
 class Settings {
-    static GameClass = ;
+    static GameClass = Snake;
     
     static Layers = {
         PLAYER: 0,
@@ -17,6 +17,6 @@ class Settings {
 
     static Debug = true;
     static ShowStats = true;
-    static ShowGrid = false;
-    static GridSize = 50;
+    static ShowGrid = true;
+    static GridSize = 40;
 }
