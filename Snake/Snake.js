@@ -1,7 +1,7 @@
 class Snake extends Game {
+
     #currentFood = null;
     #player = null;
-
     #timer = 0;
 
     constructor() {
@@ -14,7 +14,7 @@ class Snake extends Game {
         // Add the difference in time to the timer
         this.#timer += deltaTime;
         // if the timer is less than 1 second, stop
-        if (this.#timer < 1000) {
+        if (this.#timer < 350) {
             return;
         }
 
@@ -25,7 +25,9 @@ class Snake extends Game {
         if (this.#currentFood === null) {
             this.#currentFood = this.GenerateFood();
         }
-
+        else if (this.#currentFood.Removed === true) {
+            this.#currentFood = this.GenerateFood();
+        }
         // move the player
         this.#player.Move();
     }
